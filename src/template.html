@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Todo List</title>
+        <title>Weather!</title>
         <!-- <link rel="stylesheet" href="styles.css"> -->
         <link rel="shortcut icon" href="#" />
         <!-- No icon -->
@@ -15,6 +15,30 @@
         />
     </head>
     <body>
-        web server working!
+        <header>
+            Weather App
+        </header>
+        <main>
+            <form id="searchForm" novalidate>
+                <input id="searchInput" type="text" placeholder="Enter city name">
+                <button id=searchBtn type="submit">Search</button>
+            </form>
+            <div id="searchResults">
+                <h3>Halifax</h3>
+                <div id="currentWeather">
+                    <div id="conditions">Partially cloudy</div>
+                    <div id="currentTemp">5°C</div>
+                    <div id="icon">partly-cloudy-day</div>
+                <div id="feelslike">Feels like: 1°C</div>
+                <div id="humidity">Humidity: 80%</div>
+                <div id="wind">Wind: 6.71 km/h</div>
+
+            </div>
+        </main>
+        <footer>
+            <a href="https://github.com/stevec-afk" target="_blank">Steve C</a>
+            <span class="separator">|</span>
+            <a href="https://github.com/stevec-afk/weather-app" target="_blank">Source</a>
+        </footer>
     </body>
 </html>
