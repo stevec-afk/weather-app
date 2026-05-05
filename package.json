@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "material-icons": "^1.13.14"
+    "material-icons": "^1.13.14",
+    "weather-icons-npm": "^10.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
