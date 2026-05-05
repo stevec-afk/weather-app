@@ -1,4 +1,4 @@
 import "./styles.css";
-import { getWeatherData } from "./modules/weatherData";
+import { init } from "./modules/uiControl";
 
-getWeatherData("Halifax");
+init();
