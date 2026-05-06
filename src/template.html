@@ -16,25 +16,40 @@
     </head>
     <body>
         <header>
-            Weather App
+            Weather!
         </header>
         <main>
-            <form id="searchForm" novalidate>
-                <input id="searchInput" type="text" placeholder="Enter city name">
-                <button id=searchBtn type="submit">Search</button>
+            <form id="search-form" novalidate>
+                <input id="search-input" type="text" placeholder="Enter city name">
+                <button id=search-btn type="submit">Search</button>
             </form>
-            <div id="searchResults">
-                <h3 id="location">Halifax</h3>
-                <div id="currentWeather">
-                    <div id="conditions">Partially cloudy</div>
-                    <div id="currentTemp">5°C</div>
-                    <div id="iconContainer">
-                        <i id="weatherIcon" class="wi wi-day-sunny"></i>
+            <div id="main-content">
+                <div id="card-header">
+                    <span id="location">Halifax</span>
+                    <span id="timestamp">12:00pm</span>
+                </div>
+                <div id="card-left">
+                    <i id="weather-icon" class="wi wi-day-sunny"></i>
+                    <div id="current-temp">5°C</div>
+                </div>
+                <div id="card-right">
+                    <div class="weather-detail">
+                        <span>Conditions</span>
+                        <span id="conditions">Partially cloudy
                     </div>
-                <div id="feelslike">Feels like: 1°C</div>
-                <div id="humidity">Humidity: 80%</div>
-                <div id="wind">Wind: 6.71 km/h</div>
-
+                    <div class="weather-detail">
+                        <span>Feels like</span>
+                        <span id="feelslike">1 °C</span>
+                    </div>
+                    <div class="weather-detail">
+                        <span>Humidity</span>
+                        <span id="humidity">80%</span>
+                    </div>
+                    <div class="weather-detail">
+                        <span>Wind Gusts</span>
+                        <span id="wind">6.71 km/h</span>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>

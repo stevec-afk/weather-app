@@ -1,7 +1,7 @@
 import { getWeatherData } from "./weatherData";
 
-const $form = document.getElementById("searchForm");
-const $input = document.getElementById("searchInput");
+const $form = document.getElementById("search-form");
+const $input = document.getElementById("search-input");
 
 let location = "Halifax";
 
@@ -28,19 +28,19 @@ const iconMap = {
 function updateUI(data) {
     const $location = document.getElementById("location");
     const $conditions = document.getElementById("conditions");
-    const $currentTemp = document.getElementById("currentTemp");
+    const $currentTemp = document.getElementById("current-temp");
     const $feelsLike = document.getElementById("feelslike");
     const $humidity = document.getElementById("humidity");
     const $wind = document.getElementById("wind");
 
-    const $icon = document.getElementById("weatherIcon");
+    const $icon = document.getElementById("weather-icon");
     const iconClass = iconMap[data.icon] || "wi-na";
     $icon.className = `wi ${iconClass}`;
 
     $location.textContent = data.location;
     $conditions.textContent = data.conditions;
     $currentTemp.textContent = `${data.temp} °C`;
-    $feelsLike.textContent = `Feels like: ${data.feelsLike} °C`;
+    $feelsLike.textContent = `Feels like ${data.feelsLike} °C`;
     $humidity.textContent = `Humidity: ${data.humidity}%`;
     $wind.textContent = `Wind speed: ${data.wind} km/h`;
     console.log(data);
