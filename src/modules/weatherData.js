@@ -23,8 +23,8 @@ function parseWeatherData(data) {
     const parsedData = {
         location: data.resolvedAddress,
         conditions: data.currentConditions.conditions,
-        temp: data.currentConditions.temp,
-        feelsLike: data.currentConditions.feelslike,
+        temp: Math.round(data.currentConditions.temp),
+        feelsLike: Math.round(data.currentConditions.feelslike),
         humidity: data.currentConditions.humidity,
         wind: data.currentConditions.windspeed,
         icon: data.currentConditions.icon,

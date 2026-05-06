@@ -40,9 +40,9 @@ function updateUI(data) {
     $location.textContent = data.location;
     $conditions.textContent = data.conditions;
     $currentTemp.textContent = `${data.temp} °C`;
-    $feelsLike.textContent = `Feels like ${data.feelsLike} °C`;
-    $humidity.textContent = `Humidity: ${data.humidity}%`;
-    $wind.textContent = `Wind speed: ${data.wind} km/h`;
+    $feelsLike.textContent = `${data.feelsLike} °C`;
+    $humidity.textContent = `${data.humidity}%`;
+    $wind.textContent = `${data.wind} km/h`;
     console.log(data);
 }
 
@@ -56,6 +56,8 @@ $form.addEventListener("submit", async (e) => {
 
     location = $input.value;
     if (location) {
+        $input.value = "";
+        $input.blur();
         const data = await getWeatherData(location);
         console.log("UI received data:", data);
         updateUI(data);

@@ -33,11 +33,10 @@ header {
 #search-input {
     padding: 0.8rem 1.2rem;
     border: 1px solid #dfe6e9;
-    border-radius: 25px;
+    border-radius: 5px;
     font-family: inherit;
     font-size: 1rem;
     outline: none;
-    width: 90%;
 }
 
 #search-btn {
@@ -80,6 +79,7 @@ header {
 #location {
     margin: 0;
     font-size: 1.8rem;
+    text-transform: capitalize;
 }
 
 #card-left {
@@ -125,4 +125,15 @@ footer {
 footer a {
     color: var(--accent);
     text-decoration: none;
+}
+
+@media (min-width: 700px) {
+    #main-content {
+        width: 600px;
+        padding: 2rem 2rem 0.5rem; 
+    }
+    
+    #card-left {
+        padding-right: 2.5rem;
+    }
 }
